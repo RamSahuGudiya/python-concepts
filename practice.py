@@ -301,7 +301,7 @@
 # calC_sum(1,2,3)
 # calC_sum(3,2,4)
 
-cities = [1,2,3,4,5]
+# cities = [1,2,3,4,5]
 
 # def place_len(places):
 #     print("length of the cities",len(places))
@@ -453,36 +453,123 @@ cities = [1,2,3,4,5]
 # s1 = Students('ram', marks)
 # s1.print_average()        
 
-class Account:
-    def __init__(self, balance, accNum):
-        if(balance >=0):
-            self.balance = balance
-            self.accNum = accNum
-            print("On your account" , self.accNum, "has", self.balance)
-        else:
-            print('need to  add sufficient amount')
+# class Account:
+#     def __init__(self, balance, accNum):
+#         if(balance >=0):
+#             self.balance = balance
+#             self.accNum = accNum
+#             print("On your account" , self.accNum, "has", self.balance)
+#         else:
+#             print('need to  add sufficient amount')
         
 
-    def debit(self,  amount):
-        if(self.balance >= amount):
-            self.balance -= amount
-            print('Rs', amount, "was debited, Remaining balance", self.balance)
-        else:
-            print('insufficient balance in your account')
+#     def debit(self,  amount):
+#         if(self.balance >= amount):
+#             self.balance -= amount
+#             print('Rs', amount, "was debited, Remaining balance", self.balance)
+#         else:
+#             print('insufficient balance in your account')
         
         
 
-    def credit(self, amount):
-        self.balance += amount
-        print('Rs', amount, "was credited, now you have balance", self.balance)
+#     def credit(self, amount):
+#         self.balance += amount
+#         print('Rs', amount, "was credited, now you have balance", self.balance)
 
-    def get_balance(self):
-        return self.balance
+#     def get_balance(self):
+#         return self.balance
 
 
-user1 = Account(1000, 12345)
-user1.debit(100)
-user1.debit(900)
-user1.credit(10000)
-print(user1.get_balance())
-# user1.debit(-1)
+# user1 = Account(1000, 12345)
+# user1.debit(100)
+# user1.debit(900)
+# user1.credit(10000)
+# print(user1.get_balance())
+# # user1.debit(-1)
+
+
+# class Student:
+#     def __init__(self, name):
+#         self.name = name
+
+# s1 = Student('Ram sahu')
+
+# print(s1.name)
+# del s1.name
+# # print(s1.name)
+
+# class Car:
+#     @staticmethod
+#     def start():
+#         print("superuu.. bro car has been started")
+
+#     @staticmethod
+#     def stop():
+#         print('car has been stoped..')
+
+# class ToyotaCar(Car):
+#     brand = "forrtnuer"
+
+#     def __init__(self):
+#         pass
+
+# class Fortuner(ToyotaCar):
+#     def __init__(self, type):
+#         self.type = type
+
+# car1 = ToyotaCar()
+# newCar = Fortuner('diesel')
+
+# print(newCar.brand)
+
+# class Person:
+#     name = 'jumpa lahari'
+
+#     @classmethod
+#     def changeName(cl, name):
+#         cl.name = name
+
+# p1 = Person()
+# p1.changeName("Ram sahu")
+
+# print(p1.name)
+
+
+# class Student:
+#     def __init__(self, phy, chem, math):
+#         self.phy = phy
+#         self.chem = chem
+#         self.math = math
+#         self.percentage = str((self.phy + self.chem + self.math)/3)+"%"
+
+#     def clacPercentage(self):
+#         self.percentage = str((self.phy + self.chem + self.math)/3)+"%"
+
+
+# std1 = Student(98, 97, 99)
+
+# print(std1.percentage)
+
+# std1.phy = 86
+
+# std1.clacPercentage()
+# print(std1.percentage)
+
+class Student:
+    def __init__(self, phy, chem, math):
+        self.phy = phy
+        self.chem = chem
+        self.math = math
+
+    @property
+    def percentage(self):
+        return str((self.phy + self.chem + self.math)/3)+"%"
+
+
+std1 = Student(98, 97, 99)
+
+print(std1.percentage)
+
+std1.phy = 86
+
+print(std1.percentage)
